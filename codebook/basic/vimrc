@@ -1,0 +1,5 @@
+" linenumber, relative-linenumber, mouse, cindent, expandtab, shiftwidth, softtabstop, nowrap, ignorecase
+se nu rnu mouse=a cin et sw=2 sts=2 nowrap ic
+" run when not insert
+au InsertLeave * se rnu
+au InsertEnter * se nornu
