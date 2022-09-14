@@ -1,0 +1,3 @@
+linenumber, relative-linenumber, mouse, cindent,
+expandtab, shiftwidth, softtabstop, nowrap, ignorecase
+rnu when not insert

@@ -15,6 +15,8 @@
 \usepackage{enumerate}
 \usepackage{titlesec}
 \usepackage{amsmath}
+\usepackage{environ}								%分開使用說明跟code
+\usepackage{xparse}									%把begin/end env變成一行, https://tex.stackexchange.com/questions/223684/abridging-begin-end
 \usepackage[CheckSingle, CJKmath]{xeCJK}
 % \usepackage{CJKulem}
 %\usepackage[T1]{fontenc}
@@ -93,6 +95,16 @@ morestring=[b]' % defines that strings are enclosed in double quotes
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\NewEnviron{manual}{} % hide manuals
+\RenewEnviron{manual}{\BODY} % show manuals
+\NewDocumentCommand{\manuallisting}{+m}{
+  \begin{manual}
+    \lstinputlisting[language={}]{#1}
+  \end{manual}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{document}
 \pagestyle{fancy}
 \fancyfoot{}
@@ -110,6 +122,7 @@ morestring=[b]' % defines that strings are enclosed in double quotes
 
 \section{Basic}
 \subsection{.vimrc}
+\manuallisting{basic/vimrc-man}
 \lstinputlisting[language=vim]{basic/vimrc}
 
 % \subsection{Increase Stack Size}
