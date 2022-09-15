@@ -15,8 +15,7 @@
 \usepackage{enumerate}
 \usepackage{titlesec}
 \usepackage{amsmath}
-\usepackage{environ}								%分開使用說明跟code
-\usepackage{xparse}									%把begin/end env變成一行, https://tex.stackexchange.com/questions/223684/abridging-begin-end
+\usepackage{xparse}									% NewDocumentCommand 把begin/end env變成一行, https://tex.stackexchange.com/questions/223684/abridging-begin-end
 \usepackage[CheckSingle, CJKmath]{xeCJK}
 % \usepackage{CJKulem}
 %\usepackage[T1]{fontenc}
@@ -95,12 +94,15 @@ morestring=[b]' % defines that strings are enclosed in double quotes
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\NewEnviron{manual}{} % hide manuals
-\RenewEnviron{manual}{\BODY} % show manuals
-\NewDocumentCommand{\manuallisting}{+m}{
-  \begin{manual}
-    \lstinputlisting[language={}]{#1}
-  \end{manual}
+% \def\isHideManuals{1} % uncomment this line to hide manuals
+
+\NewDocumentCommand{\manuallisting}{m}{
+  \ifx\isHideManuals\undefined
+    \begin{obeylines}
+      \parindent=0pt
+      \input{#1}
+    \end{obeylines}
+  \fi
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -188,8 +190,8 @@ morestring=[b]' % defines that strings are enclosed in double quotes
 % \lstinputlisting{flow/FlowMethod.txt}
 
 \section{Math}
-
 \subsection{Fast Pow \& Inverse \& Combination}
+\manuallisting{math/fastPow_inverse_combination.man}
 \lstinputlisting{math/fastPow_inverse_combination.cpp}
 
 % \subsection{FFT}

@@ -1,0 +1,7 @@
+$ fpow(a, b, m) = a ^ b \pmod{m} $
+$ fa[i] = i! \pmod{MOD} $
+$ fi[i] = i!^{-1} \equiv 1 \pmod{MOD} $
+$ c(a, b) = \binom{a}{b} \pmod{MOD} $
+
+% verified:
+% https://vjudge.net/problem/POJ-3252
