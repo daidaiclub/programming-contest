@@ -1,6 +1,9 @@
 # old contest folder
 old/
 
+# vscode setting
+.vscode/
+
 ### https://github.com/github/gitignore/blob/main/TeX.gitignore
 ## Core latex/pdflatex auxiliary files:
 *.aux
