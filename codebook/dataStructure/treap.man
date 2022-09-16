@@ -1,0 +1,12 @@
+Treap *th = nullptr
+th = merge(th, new Treap(val)) $\Rightarrow$ 新增元素到th
+th = merge(merge(tl, tm), tr) $\Rightarrow$ 合併tl,tm,tr到th
+split(th, k, tl, tr) $\Rightarrow$ 分割th, tl的元素$\leq$ k (失去BST性質後不能用)
+kth(th, k, tl, tr) $\Rightarrow$ 分割th, gsz(tl) $\leq$ k ( < when gsz(th) < k)
+gsz $\Rightarrow$ get size | gsum $\Rightarrow$ get sum | th->rev \verb|^|= 1 $\Rightarrow$ 反轉th
+帶懶標版本, 並示範sum/rev如何pull/push
+注意Treap複雜度好但常數大, 動作能用其他方法就用, 並做io等優化
+
+% verified:
+% https://cses.fi/problemset/task/2074
+% https://vjudge.net/problem/SPOJ-COUNT1IT
