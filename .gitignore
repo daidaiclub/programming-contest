@@ -1,6 +1,11 @@
 # old contest folder
 old/
 
+# test
+**/test.cpp
+*.exe
+*.out
+
 # vscode setting
 .vscode/
 
