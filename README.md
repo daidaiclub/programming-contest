@@ -21,4 +21,4 @@
 |[CFGYM 103640](https://codeforces.com/gym/103640/)|(B)、(M)|
 |[CFGYM 103495](https://codeforces.com/gym/103495)||
 |[CF 1666](https://codeforces.com/contest/1666/)|**(E), (F), (I)**|
-|[CF 847](https://codeforces.com/contest/847/)|(J), (L)|
+|[CF 847](https://codeforces.com/contest/847/)|(J), (L)|[JL](https://codeforces.com/blog/entry/54603?#comment-386249)|
