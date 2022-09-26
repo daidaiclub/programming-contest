@@ -1,20 +1,19 @@
+const int MXN = 5e5+5;
 struct LCA{
-  vector<vector<int> > &ch, anc;
-  vector<int> tin, tout;
-  int n, lgn, ti;
-  LCA(int _n, vector<vector<int> > &_ch, int root)
-    : n(_n), ti(0), ch(_ch), tin(_n), tout(_n){
-    lgn = __lg(n) + 5;
-    anc.assign(n, vector<int>(lgn));
-    dfs(root, root); }
-  void dfs(int x, int fx){
-    tin[x] = ti++;
+  int n, lgn, ti = 0;
+  int anc[MXN][24], in[MXN], out[MXN];
+  vector<int> g[MXN];
+  LCA(int n) : n(n + 1), lgn(__lg(n) + 5){}
+  void addEdge(int x, int y){ g[x].PB(y), g[y].PB(x); }
+  void build(int x, int fx){
+    in[x] = ti++;
+    int cur = fx;
     for(int i = 0; i < lgn; ++i)
-      anc[x][i] = fx, fx = anc[fx][i];
-    for(auto i : ch[x]) dfs(i, x);
-    tout[x] = ti++; }
+      anc[x][i] = cur, cur = anc[cur][i];
+    for(auto i : g[x]) if(i != fx) build(i, x);
+    out[x] = ti++; }
   bool isanc(int a, int x){
-    return tin[a] <= tin[x] && tout[a] >= tout[x]; }
+    return in[a] <= in[x] && out[a] >= out[x]; }
   int query(int x, int y){
     if(isanc(x, y)) return x;
     if(isanc(y, x)) return y;
