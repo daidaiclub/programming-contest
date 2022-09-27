@@ -4,7 +4,6 @@ lca.build(root, root);
 lca.anc[i][j] $\Rightarrow$ i的第$2^j$個祖先
 lca.query(x, y) $\Rightarrow$ x,y的LCA
 lca.qdis(x, y) $\Rightarrow$ x,y的最短距離(可以用倍增法帶權)
-編譯指令: g++ -Wl,--stack,500000000 test.cpp
 
 % verified:
 % https://judge.yosupo.jp/problem/lca
