@@ -3,7 +3,8 @@ struct LCA{
   int n, lgn, ti = 0;
   int anc[MXN][24], in[MXN], out[MXN];
   vector<int> g[MXN];
-  LCA(int n) : n(n + 1), lgn(__lg(n) + 5){}
+  void init(int _n){
+    n = _n + 1, lgn = __lg(n) + 5; }
   void addEdge(int x, int y){ g[x].PB(y), g[y].PB(x); }
   void build(int x, int fx){
     in[x] = ti++;
@@ -14,7 +15,7 @@ struct LCA{
     out[x] = ti++; }
   bool isanc(int a, int x){
     return in[a] <= in[x] && out[a] >= out[x]; }
-  int query(int x, int y){
+  int qlca(int x, int y){
     if(isanc(x, y)) return x;
     if(isanc(y, x)) return y;
     for(int i = lgn-1; i >= 0; --i)

@@ -1,9 +1,9 @@
-LCA(n) $\Rightarrow$ n:點數
-lca.addEdge(u, v);
-lca.build(root, root);
+lca.init(n) $\Rightarrow$ n:點數
+lca.addEdge(u, v)
+lca.build(root, root) $\Rightarrow O(nlgn)$ 
+lca.qlca(x, y) $\Rightarrow O(lgn)$ x,y的LCA
+lca.qdis(x, y) $\Rightarrow O(lgn)$ x,y的距離(可用倍增法帶權)
 lca.anc[i][j] $\Rightarrow$ i的第$2^j$個祖先
-lca.query(x, y) $\Rightarrow$ x,y的LCA
-lca.qdis(x, y) $\Rightarrow$ x,y的最短距離(可以用倍增法帶權)
 
 % verified:
 % https://judge.yosupo.jp/problem/lca
