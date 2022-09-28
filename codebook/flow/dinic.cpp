@@ -7,8 +7,8 @@ struct Dinic{
     n = _n; s = _s; t = _t;
     for(int i = 0; i < n; ++i) e[i].clear(); }
   void addEdge(int u, int v, ll f = 1){
-    e[u].push_back({v, f, (int)e[v].size()});
-    e[v].push_back({u, 0, (int)e[u].size() - 1}); }
+    e[u].push_back({v, f, e[v].size()});
+    e[v].push_back({u, 0, e[u].size() - 1}); }
   bool bfs(){
     memset(lvl, -1, n * 4);
     queue<int> q;

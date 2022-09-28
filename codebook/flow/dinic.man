@@ -1,4 +1,4 @@
-求最大流, 最差$O(N^2E)$ (求二分最大匹配時$O(E\sqrt{n})$)
+求最大流, 最差$O(N^2E)$ (求二分最大匹配時$O(E\sqrt{N})$)
 dinic.init(n, st, en) $\Rightarrow$ 0-base
 dinic.addEdge(u, v, f) $\Rightarrow u \rightarrow v$, flow $f$ units
 dinic.run() $\Rightarrow$  return max flow from $st$ to $en$
