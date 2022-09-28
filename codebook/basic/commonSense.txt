@@ -1,2 +1,9 @@
 陣列過大時本機的編譯指令: g++ -Wl,--stack,40000000 a.cpp
 1e7的int陣列 = 4e7 byte = 40 mb
+
+STL式模板函式名稱定義：
+.init(n, ...) $\Rightarrow$ 初始化並重置全部變數, 0-base
+.addEdge(u, v, ...) $\Rightarrow$ 加入一條邊, 有向圖為$u \rightarrow v$, 無向圖為$u \leftrightarrow v$
+.run() $\Rightarrow$ 執行並回傳答案
+.build() $\Rightarrow$ 查詢前處理
+.query(...) $\Rightarrow$ 查詢並回傳答案
