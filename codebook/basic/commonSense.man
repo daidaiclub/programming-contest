@@ -1,4 +1,6 @@
-陣列過大時本機的編譯指令: g++ -Wl,--stack,40000000 a.cpp
+陣列過大時本機的指令:
+windows: g++ -Wl,--stack,40000000 a.cpp
+linux: ulimit -s unlimited
 1e7的int陣列 = 4e7 byte = 40 mb
 
 STL式模板函式名稱定義：
