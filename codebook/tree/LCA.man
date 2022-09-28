@@ -1,9 +1,9 @@
-lca.init(n) $\Rightarrow$ n:點數
-lca.addEdge(u, v)
+lca.init(n) $\Rightarrow$ 0-base
+lca.addEdge(u, v) $\Rightarrow u \leftrightarrow v$
 lca.build(root, root) $\Rightarrow O(nlgn)$ 
-lca.qlca(x, y) $\Rightarrow O(lgn)$ x,y的LCA
-lca.qdis(x, y) $\Rightarrow O(lgn)$ x,y的距離(可用倍增法帶權)
-lca.anc[i][j] $\Rightarrow$ i的第$2^j$個祖先
+lca.qlca(u, v) $\Rightarrow O(lgn)$ u, v的LCA
+lca.qdis(u, v) $\Rightarrow O(lgn)$ u, v的距離(可用倍增法帶權)
+lca.anc[u][i] $\Rightarrow$ u的第$2^i$個祖先
 
 % verified:
 % https://judge.yosupo.jp/problem/lca

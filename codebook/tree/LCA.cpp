@@ -4,28 +4,29 @@ struct LCA{
   int anc[MXN][24], in[MXN], out[MXN];
   vector<int> g[MXN];
   void init(int _n){
-    n = _n + 1, lgn = __lg(n) + 5; }
-  void addEdge(int x, int y){ g[x].PB(y), g[y].PB(x); }
-  void build(int x, int fx){
-    in[x] = ti++;
-    int cur = fx;
+    n = _n, lgn = __lg(n) + 5;
+    for(int i = 0; i < n; ++i) g[i].clear(); }
+  void addEdge(int u, int v){ g[u].PB(v), g[v].PB(u); }
+  void build(int u, int f){
+    in[u] = ti++;
+    int cur = f;
     for(int i = 0; i < lgn; ++i)
-      anc[x][i] = cur, cur = anc[cur][i];
-    for(auto i : g[x]) if(i != fx) build(i, x);
-    out[x] = ti++; }
-  bool isanc(int a, int x){
-    return in[a] <= in[x] && out[a] >= out[x]; }
-  int qlca(int x, int y){
-    if(isanc(x, y)) return x;
-    if(isanc(y, x)) return y;
+      anc[u][i] = cur, cur = anc[cur][i];
+    for(auto i : g[u]) if(i != f) build(i, u);
+    out[u] = ti++; }
+  bool isanc(int a, int u){
+    return in[a] <= in[u] && out[a] >= out[u]; }
+  int qlca(int u, int v){
+    if(isanc(u, v)) return u;
+    if(isanc(v, u)) return v;
     for(int i = lgn-1; i >= 0; --i)
-      if(!isanc(anc[x][i], y)) x = anc[x][i];
-    return anc[x][0]; }
-  int qdis(int x, int y){
-    int dis = !isanc(x, y) + !isanc(y, x);
+      if(!isanc(anc[u][i], v)) u = anc[u][i];
+    return anc[u][0]; }
+  int qdis(int u, int v){
+    int dis = !isanc(u, v) + !isanc(v, u);
     for(int i = lgn - 1; i >= 0; --i){
-      if(!isanc(anc[x][i], y))
-        x = anc[x][i], dis += 1<<i;
-      if(!isanc(anc[y][i], x))
-        y = anc[y][i], dis += 1<<i; }
+      if(!isanc(anc[u][i], v))
+        u = anc[u][i], dis += 1<<i;
+      if(!isanc(anc[v][i], u))
+        v = anc[v][i], dis += 1<<i; }
     return dis; } };
