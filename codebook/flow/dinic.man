@@ -1,0 +1,6 @@
+dinic.init(n, st, en) $\Rightarrow$ 0-base
+dinic.addEdge(u, v, f) $\Rightarrow u \rightarrow v$, flow $f$ units
+dinic.run() $\Rightarrow$ return max flow from $st$ to $en$
+
+% verified:
+% https://cses.fi/problemset/task/1694/
