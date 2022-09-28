@@ -9,3 +9,5 @@ STL式模板函式名稱定義：
 .run() $\Rightarrow$ 執行並回傳答案
 .build() $\Rightarrow$ 查詢前處理
 .query(...) $\Rightarrow$ 查詢並回傳答案
+
+memset設-0x3f的值是 -0x3e3e3e3f / 0xc1c1c1c1

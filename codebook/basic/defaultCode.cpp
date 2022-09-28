@@ -2,7 +2,9 @@
 #define ll long long
 #define ld long double
 #define INF 0x3f3f3f3f
+#define NINF 0xc1c1c1c1
 #define LLINF 0x3f3f3f3f3f3f3f3f
+#define NLLINF 0xc1c1c1c1c1c1c1c1
 #define X first
 #define Y second
 #define PB emplace_back
