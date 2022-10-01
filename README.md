@@ -22,3 +22,6 @@
 |[CFGYM 103495](https://codeforces.com/gym/103495)||
 |[CF 1666](https://codeforces.com/contest/1666/)|**(E), (F), (I)**|
 |[CF 847](https://codeforces.com/contest/847/)|(J), (L)|[JL](https://codeforces.com/blog/entry/54603?#comment-386249)|
+|[CF 1739](https://codeforces.com/contest/1739/)|(E)|[E](https://codeforces.com/blog/entry/107379?#comment-957331)|
+|[NCPC 2022 初賽]|(E) (G)||
+||||
