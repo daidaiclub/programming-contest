@@ -1,0 +1,5 @@
+isprime(n) $\Rightarrow$ 判斷n是否為質數
+記得填magic number
+
+% varified:
+% https://zerojudge.tw/ShowProblem?problemid=a007
