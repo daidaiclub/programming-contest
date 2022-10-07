@@ -1,0 +1,8 @@
+bit.init(n) $\Rightarrow$ 1-base
+bit.add(i, x) $\Rightarrow$ add a[i] by x
+bit.sum(i) $\Rightarrow$ get sum of [1, i]
+bit.kth(k) $\Rightarrow$ get kth small number (by using bit.add(num, 1))
+維護差分可以變成區間加值，單點求值
+
+% verified:
+% https://judge.yosupo.jp/problem/static_range_sum
