@@ -5,3 +5,6 @@ fail[k] + 1 為次長相同前綴後綴長度
 如果我們不只想求最多，那可能的長度由大到小會是
 fail[k]+1, fail[fail[k]]+1, fail[fail[fail[k]]]+1...
 直到有值為 -1 為止
+
+% verified:
+% https://cses.fi/problemset/task/1732/
