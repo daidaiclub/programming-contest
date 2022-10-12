@@ -1,0 +1,6 @@
+LIS: 最長遞增子序列
+LCS: 最長共同子字串(利用LIS), 但常數可能較大
+
+% verified:
+% https://cses.fi/129/task/C
+
