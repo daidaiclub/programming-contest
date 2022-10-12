@@ -8,13 +8,15 @@
 #define X first
 #define Y second
 #define PB emplace_back
-#define pll pair<long, long>
+#define pll pair<ll, ll>
 #define MEM(a,n) memset(a, n, sizeof(a))
+#define io ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 using namespace std;
 const int MXN = 4e5+5;
 
 void sol(){}
 int main(){
+  io
   int t=1;
   cin >> t;
   while(t--){
