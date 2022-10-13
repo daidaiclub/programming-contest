@@ -9,7 +9,7 @@ struct Manacher {
     str[len] = '*';
     int mx = 0, id = 0;
     for(int i = 1; i < len; ++i) {
-      p[i] = mx > i ? min(p[(id << 1) - i], mx - i) : 1;
+      p[i] = mx > i ? min(p[(id<<1) - i], mx - i) : 1;
       while(str[i + p[i]] == str[i - p[i]]) p[i]++;
       if(i + p[i] > mx) {
         mx = i + p[i];
