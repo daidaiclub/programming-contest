@@ -1,21 +1,15 @@
 const int MXN = 1e6+5;
 struct BIT{
-  int n;
-  ll a[MXN];
-  void init(int _n){
-    n = _n;
-    MEM(a, 0); }
+  ll n, a[MXN];
+  void init(int _n){ n = _n; MEM(a, 0); }
   void add(int i, int x){
-    for(; i <= n; i += i & -i)
-      a[i] += x; }
+    for(; i <= n; i += i & -i) a[i] += x; }
   int sum(int i){
     int ret = 0;
-    for(; i > 0; i -= i & -i)
-      ret += a[i];
+    for(; i > 0; i -= i & -i) ret += a[i];
     return ret; }
   int kth(int k){
     int res = 0;
     for(int i = 1 << __lg(n); i > 0; i >>= 1)
-      if(res + i <= n && a[res + i] < k)
-        k -= a[res += i];
+      if(res + i <= n && a[res+i] < k) k -= a[res+=i];
     return res; } };

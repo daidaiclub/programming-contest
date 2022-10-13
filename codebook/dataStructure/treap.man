@@ -1,4 +1,4 @@
-Treap *th = nullptr
+Treap *th = 0
 th = merge(th, new Treap(val)) $\Rightarrow$ 新增元素到th
 th = merge(merge(tl, tm), tr) $\Rightarrow$ 合併tl,tm,tr到th
 split(th, k, tl, tr) $\Rightarrow$ 分割th, tl的元素$\leq$ k (失去BST性質後不能用)

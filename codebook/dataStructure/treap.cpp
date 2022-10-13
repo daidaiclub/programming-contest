@@ -2,7 +2,7 @@ struct Treap{
   Treap *l, *r;
   int pri, sz, rev;
   ll val, sum;
-  Treap(int _val): l(nullptr), r(nullptr),
+  Treap(int _val): l(0), r(0),
     pri(rand()), sz(1), rev(0),
     val(_val), sum(_val){} };
 
@@ -31,7 +31,7 @@ Treap* merge(Treap* a, Treap* b){
     return pull(b); } }
 
 void split(Treap *x, int k, Treap *&a, Treap *&b){
-  if(!x) a = b = nullptr;
+  if(!x) a = b = 0;
   else{
     push(x);
     if(x->val <= k) a = x, split(x->r, k, a->r, b);
@@ -39,7 +39,7 @@ void split(Treap *x, int k, Treap *&a, Treap *&b){
     pull(x); } }
 
 void kth(Treap *x, int k, Treap *&a, Treap *&b){
-  if(!x) a = b = nullptr;
+  if(!x) a = b = 0;
   else{
     push(x);
     if(gsz(x->l) < k)
