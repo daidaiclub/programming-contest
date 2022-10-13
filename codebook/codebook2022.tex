@@ -17,6 +17,7 @@
 \usepackage{amsmath}
 \usepackage{xparse}									% NewDocumentCommand 把begin/end env變成一行, https://tex.stackexchange.com/questions/223684/abridging-begin-end
 \usepackage[CheckSingle, CJKmath]{xeCJK}
+\usepackage{tikz}
 % \usepackage{CJKulem}
 %\usepackage[T1]{fontenc}
 \titlespacing{\section}{0cm}{0cm}{0cm}
@@ -172,7 +173,7 @@ morestring=[b]' % defines that strings are enclosed in double quotes
 \manuallisting{flow/dinic.man}
 \lstinputlisting{flow/dinic.cpp}
 
-\subsection{Hungarian}
+% \subsection{Hungarian}
 %\lstinputlisting{flow/Hungarian.cpp}
 
 %\subsection{Hungarian Unbalanced}
@@ -315,6 +316,9 @@ morestring=[b]' % defines that strings are enclosed in double quotes
 \subsection{Convex Hull *}
 \lstinputlisting{geometry/convex_hull.cpp}
 
+\subsection{Convex Hull trick *}
+\lstinputlisting{geometry/convex_hull_trick.cpp}
+
 % \subsection{Convex Hull 3D}
 % \lstinputlisting{geometry/Convexhull3D.cpp}
 
@@ -333,9 +337,6 @@ morestring=[b]' % defines that strings are enclosed in double quotes
 
 \subsection{Li Chao Segment Tree *}
 \lstinputlisting{dataStructure/li_chao_st.cpp}
-
-\subsection{Convex Hull trick *}
-\lstinputlisting{geometry/convex_hull_trick.cpp}
 
 % \subsection{Tangent line of two circles}
 % \lstinputlisting{geometry/Tangent_line_of_two_circles.cpp}
@@ -525,8 +526,8 @@ morestring=[b]' % defines that strings are enclosed in double quotes
 %\subsection{Leftist Heap}
 %\lstinputlisting{dataStructure/Leftist_Heap.cpp}
 
-% \subsection{Black Magic}
-% \lstinputlisting{dataStructure/extc_bt.cpp}
+\subsection{Black Magic}
+\lstinputlisting{dataStructure/black_magic.cpp}
 
 \section{Others}
 
@@ -543,5 +544,8 @@ morestring=[b]' % defines that strings are enclosed in double quotes
 %\lstinputlisting{others/painter.cpp}
 
 % \lstinputlisting{others/funny.cpp}
+\begin{tikzpicture}
+  \draw[step=0.5,black,thin] (0,0) grid (18,38);
+\end{tikzpicture}
 
 \end{document}
