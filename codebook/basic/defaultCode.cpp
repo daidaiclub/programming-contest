@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
+
 #ifdef LOCAL // ======== Local ======== g++ -DLOCAL ...
 void dbg() { cerr << '\n'; }
 template<class T, class ...U> void dbg(T a, U ...b) { 
@@ -11,11 +12,10 @@ template<class T> void org(T l, T r) {
 #define orange(args...) \
   (cerr << "#> [" + string(#args) + ") = ", org(args))
 #else            // ======== OnlineJudge ========
-#pragma GCC optimize("O3,unroll-loops")
-#pragma GCC target("avx2,bmi,bmi2,lzcnt,popcnt")
-#define debug(...) ((void)0)
-#define orange(...) ((void)0)
+#define DEBUG(...) ((void)0)
+#define ORANGE(...) ((void)0)
 #endif
+
 #define ll long long
 #define ld long double
 #define INF 0x3f3f3f3f
