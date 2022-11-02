@@ -25,7 +25,7 @@ struct Pt{
     //   (dcmp(x-a.x) == 0 && dcmp(y-a.y) < 0); }
   bool operator==(const Pt &a) const{
     return dcmp(x - a.x) == 0 && dcmp(y - a.y) == 0; }
-  int qua() { // 在哪個象限(軸上點會被歸類到逆時針的象限)
+  int qua() { // 在哪個象限(軸上點歸類到逆時針的象限)
     if(x > 0 && y >= 0) return 1;
     if(x <= 0 && y > 0) return 2;
     if(x < 0 && y <= 0) return 3;
