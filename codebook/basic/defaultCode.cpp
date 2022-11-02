@@ -7,9 +7,9 @@ template<class T, class ...U> void dbg(T a, U ...b) {
   cerr << a << ' ', dbg(b...); } 
 template<class T> void org(T l, T r) { 
   while (l != r) cerr << *l++ << ' '; cerr << '\n'; } 
-#define debug(args...) \
+#define DEBUG(args...) \
   (dbg("#> (" + string(#args) + ") = (", args, ")"))
-#define orange(args...) \
+#define ORANGE(args...) \
   (cerr << "#> [" + string(#args) + ") = ", org(args))
 #else            // ======== OnlineJudge ========
 #define DEBUG(...) ((void)0)
@@ -28,10 +28,10 @@ template<class T> void org(T l, T r) {
 #define pll pair<ll, ll>
 #define MEM(a,n) memset(a, n, sizeof(a))
 #define io ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-const int MXN = 4e5+5;
+const int MXN = + 5;
 
 void sol(){}
 int main(){
   io int t=1;
   cin >> t; // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-  while(t--){sol();}}
+  while(t--){ sol(); } }
