@@ -9,4 +9,4 @@
 
 # problems to solve
 
-https://hackmd.io/@jteng2127/daidaiclub
+https://hackmd.io/@fuyajo/daidaiclub
