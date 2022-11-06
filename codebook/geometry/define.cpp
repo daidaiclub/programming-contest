@@ -29,13 +29,10 @@ struct Pt{
     if(x > 0 && y >= 0) return 1;
     if(x <= 0 && y > 0) return 2;
     if(x < 0 && y <= 0) return 3;
-    if(x >= 0 && y < 0) return 4;
-  }
+    if(x >= 0 && y < 0) return 4; }
   ld angle() const{ // -pi ~ pi
     if(dcmp(x) == 0 && dcmp(y) == 0) return 0;
-    return atan2(y, x); }
-  }
-};
+    return atan2(y, x); } };
 ld norm2(const Pt &a){
   return a * a; }
 ld norm(const Pt &a){ // norm(a - b) = dis of a, b
@@ -51,9 +48,9 @@ struct Line{
   Line(Pt _s = Pt(0, 0), Pt _e = Pt(0, 0)):
     s(_s), e(_e) { v = e - s; ang = atan2(v.y, v.x); }
   bool operator<(const Line &L) const{ // sort by angle
-    return ang < L.ang;
-} };
+    return ang < L.ang; } };
 struct Circle{
   Pt o; ld r;
   Circle(Pt _o = Pt(0, 0), ld _r = 0): o(_o), r(_r){}
-};
+  bool inside(const Pt &a) const {
+    return norm2(a - o) <= r * r; } };
