@@ -25,7 +25,7 @@ struct Dinic{
     ll res = 0;
     for(auto &i : e[u])
       if(i.f > 0 && lvl[i.v] == lvl[u] + 1){
-        int tmp = dfs(i.v, min(nf, i.f));
+        ll tmp = dfs(i.v, min(nf, i.f));
         res += tmp, nf -= tmp, i.f -= tmp;
         e[i.v][i.re].f += tmp;
         if(nf == 0) return res; }
