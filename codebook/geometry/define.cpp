@@ -1,11 +1,11 @@
 const ld EPS = 1e-8;
 const ld PI = acos(-1);
 int dcmp(ld x){ // float x (<, ==, >) y -> (-1, 0, 1)
-  if(abs(x) < eps) return 0;
+  if(abs(x) < EPS) return 0;
   else return x < 0 ? -1 : 1;
 }
 struct Pt{
-  ld x, y;
+  ld x, y; // 改三維記得其他函式都要改
   Pt(ld _x = 0, ld _y = 0): x(_x), y(_y){}
   Pt operator+(const Pt &a) const{
     return Pt(x + a.x, y + a.y); }
