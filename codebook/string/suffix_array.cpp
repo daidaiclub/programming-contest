@@ -1,12 +1,12 @@
-const int MAX = 1020304;
+const int MXN = 1e6;
 // sa[i]: idx of ith rank, rk[i]: rank of idx
 // he[i]: sa[i], sa[i - 1] 前he[i]個字元相同
-int ct[MAX], he[MAX], rk[MAX];
-int sa[MAX], tsa[MAX], tp[MAX][2];
+int ct[MXN], he[MXN], rk[MXN];
+int sa[MXN], tsa[MXN], tp[MXN][2];
 void suffix_array(string ip){ // 0-base
   int len = ip.size();
   int alp = 256;
-  memset(ct, 0, sizeof(ct));
+  MEM(ct, 0);
   for(int i = 0; i < len; i++) ct[ip[i] + 1]++;
   for(int i = 1; i < alp; i++) ct[i] +=ct[i - 1];
   for(int i = 0; i < len; i++) rk[i] = ct[ip[i]];
