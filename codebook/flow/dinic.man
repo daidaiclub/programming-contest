@@ -2,6 +2,7 @@
 dinic.init(n, st, en) $\Rightarrow$ 0-base
 dinic.addEdge(u, v, f) $\Rightarrow u \rightarrow v$, flow $f$ units
 dinic.run() $\Rightarrow$  return max flow from $st$ to $en$
+反向邊為該邊的流量
 
 Dinic玄學: 若TLE，可以先加"正向邊"且每次都run()，再全加一次每次都run()。
 範例code待補
