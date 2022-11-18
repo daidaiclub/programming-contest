@@ -37,7 +37,8 @@ struct BccVertex {
         top = 0;
         DFS(i,i);
       }
-    REP(i,nScc) res.PB(sccv[i]);
+    for (int i = 0; i < nScc; ++i)
+      res.PB(sccv[i]);
     return res;
   }
 }graph;

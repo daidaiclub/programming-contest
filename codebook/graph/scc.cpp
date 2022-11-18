@@ -1,7 +1,7 @@
-struct Scc{
+struct Scc{ //O(V + E)
   int n, nScc, vst[MXN], bln[MXN];
   vector<int> E[MXN], rE[MXN], vec;
-  void init(int _n){
+  void init(int _n){ // 0-base
     n = _n;
     for (int i=0; i<MXN; i++)
       E[i].clear(), rE[i].clear();
@@ -21,13 +21,14 @@ struct Scc{
   void solve(){
     nScc = 0;
     vec.clear();
-    FZ(vst);
+    MEM(vst, 0);
     for (int i=0; i<n; i++)
       if (!vst[i]) DFS(i);
     reverse(vec.begin(),vec.end());
-    FZ(vst);
+    MEM(vst, 0);
     for (auto v : vec)
       if (!vst[v]){
+        DEBUG(v, nScc);
         rDFS(v); nScc++;
       }
   }
