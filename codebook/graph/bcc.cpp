@@ -1,8 +1,8 @@
-struct BccVertex {
+struct BccVertex { // 沒有橋的連通分量
   int n,nScc,step,dfn[MXN],low[MXN];
   vector<int> E[MXN],sccv[MXN];
   int top,stk[MXN];
-  void init(int _n) {
+  void init(int _n) { // 0-base
     n = _n; nScc = step = 0;
     for (int i=0; i<n; i++) E[i].clear();
   }
@@ -28,6 +28,8 @@ struct BccVertex {
       }else
         low[u] = min(low[u],dfn[v]);
   } }
+  // 回傳分組結果，一個點出現在多個連通分量就是關節點
+  // 一個連通分量只有兩個點就是橋
   vector<vector<int>> solve() {
     vector<vector<int>> res;
     for (int i=0; i<n; i++)
@@ -37,7 +39,8 @@ struct BccVertex {
         top = 0;
         DFS(i,i);
       }
-    REP(i,nScc) res.PB(sccv[i]);
+    for (int i = 0; i < nScc; ++i)
+      res.PB(sccv[i]);
     return res;
   }
 }graph;
