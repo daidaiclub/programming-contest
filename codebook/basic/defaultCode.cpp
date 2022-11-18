@@ -1,4 +1,5 @@
 #include<bits/stdc++.h>
+#include <chrono>
 using namespace std;
 
 #ifdef LOCAL // ======== Local ======== g++ -DLOCAL ...
@@ -29,9 +30,10 @@ template<class T> void org(T l, T r) {
 #define MEM(a,n) memset(a, n, sizeof(a))
 #define io ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 const int MXN = + 5;
+mt19937 rng(chrono::sQteady_clock::now().time_since_epoch().count());
 
 void sol(){}
 int main(){
   io int t=1;
-  cin >> t; // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  // cin >> t;
   while(t--){ sol(); } }
