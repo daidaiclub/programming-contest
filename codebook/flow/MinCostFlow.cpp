@@ -8,11 +8,11 @@ struct zkwflow{
     for(int i=0;i<n;i++) E[i].clear();
   }
   void addEdge(int u, int v, int f, ll w){
-    E[u].emplace_back(v, f, (int)E[v].size(), w);
-    E[v].emplace_back(u, 0 ,(int)E[u].size()-1, -w);
+    E[u].push_back({v, f, E[v].size(), w});
+    E[v].push_back({u, 0 ,E[u].size()-1, -w});
   }
   bool SPFA(){
-    fill_n(dis, n ,LLMXN); memset(vis, 0, 4 * n);
+    fill_n(dis, n, LLINF); memset(vis, 0, 4 * n);
     queue<int> q; q.push(s); dis[s] = 0;
     while (!q.empty()){
       int u = q.front(); q.pop(); vis[u] = false;
@@ -21,12 +21,12 @@ struct zkwflow{
           dis[it.v] = dis[u] + it.w;
           if(!vis[it.v]){
             vis[it.v] = 1; q.push(it.v);
-    } } } }
-    return dis[t] != LLMXN;
+          } } } }
+    return dis[t] != LLINF;
   }
   int DFS(int u, int nf){
     if(u == t) return nf;
-    int res  =0; vis[u] = 1;
+    int res =0; vis[u] = 1;
     for(int &i = ptr[u]; i < (int)E[u].size(); ++i){
       auto &it = E[u][i];
       if(it.f>0&&dis[it.v]==dis[u]+it.w&&!vis[it.v]){

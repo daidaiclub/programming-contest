@@ -1,3 +1,11 @@
+建模方式:
+限制條件有幾大類: 分層建flow
+每個點有不同限制: 拆點(出入點等等)
+全部同限制: 超級源點、匯點
+可以設定流量，利用費用找答案
+例如要找s-t中k條路徑，可以用超源連s流量k，超匯同理
+每個點之間流量1，費用是邊的長度，跑最小費用流
+
 Maximize $c^T$ x subject to $Ax ≤ b, x ≥ 0$;
 with the corresponding symmetric dual problem,
 Minimize $b^T$ y subject to $A^T y ≥ c, y ≥ 0$.
