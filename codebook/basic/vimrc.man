@@ -1,2 +1,1 @@
 linenumber, relative-linenumber, mouse, cindent, expandtab, shiftwidth, softtabstop, nowrap, ignorecase(when search), noVi-compatible, backspace
-nornu when enter insert mode
